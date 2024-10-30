@@ -25,3 +25,25 @@ bool getKey() {
         return false; //key is not granted
     }
 }
+
+//Function to open the door if the key is obtained
+void openDoor() {
+    printf("You return to the door and use the key to open it.\n");
+    printf("the door is now open!\n");
+}
+
+
+int main() {
+    //Set 1: Check the door
+    if (isDoorLocked()) {
+        //Step 2: Find the entity and get the key
+        if (getkey()) {
+            //Step 3: Open the door
+            openDoor();
+        } else {
+            printf("You could not get the key. The door remains locked.\n ");
+        }else {
+            printf("The door is already unlocked.\n");
+        }
+        return 0;
+    }
