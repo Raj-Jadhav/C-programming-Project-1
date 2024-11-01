@@ -13,7 +13,7 @@ bool isDoorLocked() {
 bool getKey() {
     int age;
     printf("you find the entity with the key.\n");
-    printf("Entity: Are you above 18? (Enter your age):  ")
+    printf("Entity: Are you above 18? (Enter your age):  ");
     scanf("%d", &age);
 
 
@@ -34,16 +34,18 @@ void openDoor() {
 
 
 int main() {
-    //Set 1: Check the door
+    // Set 1: Check the door
     if (isDoorLocked()) {
-        //Step 2: Find the entity and get the key
-        if (getkey()) {
-            //Step 3: Open the door
+        // Step 2: Find the entity and get the key
+        if (getKey()) {
+            // Step 3: Open the door
             openDoor();
         } else {
-            printf("You could not get the key. The door remains locked.\n ");
-        }else {
-            printf("The door is already unlocked.\n");
+            printf("You could not get the key. The door remains locked.\n");
         }
-        return 0;
+    } else {
+        printf("The door is already unlocked.\n");
     }
+    
+    return 0;
+}
